@@ -1,4 +1,15 @@
 {
+  "name": "proyecto-integrador-backend",
+  "version": "1.0.0",
+  "description": "Backend con json-server para gestión de tareas",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "node": "^25.5.0"
+  },
   "dependencies": {
     "json-server": "^1.0.0-beta.6"
   }

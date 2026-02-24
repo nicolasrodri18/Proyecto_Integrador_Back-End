@@ -1,0 +1,76 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre_completo": "Juan Pérez",
+      "documento": "10203040"
+    },
+    {
+      "id": "2",
+      "nombre_completo": "María García",
+      "documento": "20304050"
+    },
+    {
+      "id": "3",
+      "nombre_completo": "Carlos Rodríguez",
+      "documento": "30405060"
+    },
+    {
+      "id": "4",
+      "nombre_completo": "Ana Martínez",
+      "documento": "40506070"
+    },
+    {
+      "id": "5",
+      "nombre_completo": "Luis Hernández",
+      "documento": "50607080"
+    },
+    {
+      "id": "6",
+      "nombre_completo": "Elena Gómez",
+      "documento": "60708090"
+    },
+    {
+      "id": "7",
+      "nombre_completo": "Diego López",
+      "documento": "70809001"
+    },
+    {
+      "id": "8",
+      "nombre_completo": "Lucía Díaz",
+      "documento": "80900112"
+    },
+    {
+      "id": "9",
+      "nombre_completo": "Fernando Ruiz",
+      "documento": "90011223"
+    },
+    {
+      "id": "10",
+      "nombre_completo": "Sofía Torres",
+      "documento": "11223344"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "8be9",
+      "userId": "1",
+      "documento": "10203040",
+      "nombre_completo": "Juan Pérez",
+      "title": "desarrollo de guia",
+      "description": "completar los items",
+      "status": "activa",
+      "fecha": "16 de febrero de 2026, 23:26"
+    },
+    {
+      "id": "162b",
+      "userId": "2",
+      "documento": "20304050",
+      "nombre_completo": "María García",
+      "title": "estudiar sobre mvc",
+      "description": "desarrollar el cuestionario",
+      "status": "inactiva",
+      "fecha": "16 de febrero de 2026, 23:27"
+    }
+  ]
+}
