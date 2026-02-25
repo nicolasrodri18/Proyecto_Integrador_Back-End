@@ -71,6 +71,16 @@
       "description": "desarrollar el cuestionario",
       "status": "inactiva",
       "fecha": "16 de febrero de 2026, 23:27"
+    },
+    {
+      "id": "2402",
+      "userId": "3",
+      "documento": "30405060",
+      "nombre_completo": "Carlos Rodríguez",
+      "title": "actualizar",
+      "description": "actualizar con patch del usuario",
+      "status": "activa",
+      "fecha": "25 de febrero de 2026, 10:31"
     }
   ]
 }
