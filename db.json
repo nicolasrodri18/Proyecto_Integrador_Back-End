@@ -59,7 +59,7 @@
       "nombre_completo": "Juan Pérez",
       "title": "desarrollo de guia",
       "description": "completar los items",
-      "status": "activa",
+      "status": "en proceso",
       "fecha": "16 de febrero de 2026, 23:26"
     },
     {
@@ -69,7 +69,7 @@
       "nombre_completo": "María García",
       "title": "estudiar sobre mvc",
       "description": "desarrollar el cuestionario",
-      "status": "inactiva",
+      "status": "completada",
       "fecha": "16 de febrero de 2026, 23:27"
     },
     {
@@ -79,8 +79,28 @@
       "nombre_completo": "Carlos Rodríguez",
       "title": "actualizar",
       "description": "actualizar con patch del usuario",
-      "status": "activa",
+      "status": "completada",
       "fecha": "25 de febrero de 2026, 10:31"
+    },
+    {
+      "id": "3089",
+      "userId": "3",
+      "documento": "30405060",
+      "nombre_completo": "Carlos Rodríguez",
+      "title": "Trabajo estados",
+      "description": "describe el filtro y estado de la tarea",
+      "status": "pendiente",
+      "fecha": "3 de marzo de 2026, 10:21"
+    },
+    {
+      "id": "43c9",
+      "userId": "4",
+      "documento": "40506070",
+      "nombre_completo": "Ana Martínez",
+      "title": "Prueba Estado tarea",
+      "description": "probando estados de tarea",
+      "status": "completada",
+      "fecha": "3 de marzo de 2026, 11:51"
     }
   ]
 }
