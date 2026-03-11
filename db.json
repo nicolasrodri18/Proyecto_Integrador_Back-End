@@ -2,53 +2,63 @@
   "usuarios": [
     {
       "id": "1",
-      "nombre_completo": "Juan Pérez",
-      "documento": "10203040"
+      "nombre_completo": "ADMIN",
+      "documento": "10203040",
+      "rol": "admin"
     },
     {
       "id": "2",
       "nombre_completo": "María García",
-      "documento": "20304050"
+      "documento": "20304050",
+      "rol": "user"
     },
     {
       "id": "3",
       "nombre_completo": "Carlos Rodríguez",
-      "documento": "30405060"
+      "documento": "30405060",
+      "rol": "user"
     },
     {
       "id": "4",
       "nombre_completo": "Ana Martínez",
-      "documento": "40506070"
+      "documento": "40506070",
+      "rol": "user"
     },
     {
       "id": "5",
       "nombre_completo": "Luis Hernández",
-      "documento": "50607080"
+      "documento": "50607080",
+      "rol": "user"
     },
     {
       "id": "6",
       "nombre_completo": "Elena Gómez",
-      "documento": "60708090"
+      "documento": "60708090",
+      "rol": "user"
     },
     {
       "id": "7",
       "nombre_completo": "Diego López",
-      "documento": "70809001"
+      "documento": "70809001",
+      "rol": "user"
     },
     {
       "id": "8",
       "nombre_completo": "Lucía Díaz",
-      "documento": "80900112"
+      "documento": "80900112",
+      "rol": "user"
     },
     {
       "id": "9",
       "nombre_completo": "Fernando Ruiz",
-      "documento": "90011223"
+      "documento": "90011223",
+      "rol": "user"
     },
     {
       "id": "10",
       "nombre_completo": "Sofía Torres",
-      "documento": "11223344"
+      "documento": "11223344",
+      "rol": "user"
     }
   ],
   "tasks": [
