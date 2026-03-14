@@ -1,20 +1,14 @@
 {
   "name": "proyecto-integrador-backend",
   "version": "1.0.0",
-  "description": "Backend con json-server para gestión de tareas",
-  "main": "nodemon node src/app.js",
+  "type": "module",
   "scripts": {
-    "start": "json-server --watch db.json --port 3000"
-  },
-  "keywords": [],
-  "devDependencies": {
-    "node": "^25.5.0",
-    "nodemon": "^3.1.14"
+    "dev": "nodemon src/main.js"
   },
   "dependencies": {
-    "express": "^5.2.1",
-    "json-server": "^1.0.0-beta.6"
+    "express": "^5.2.1"
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
