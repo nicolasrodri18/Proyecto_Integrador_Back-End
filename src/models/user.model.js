@@ -52,3 +52,12 @@ export const remove = async (id) => {
   await writeDB(db)
   return removed
 }
+
+export const toggleStatus = async (id) => {
+  const db = await readDB()
+  const index = db.usuarios.findIndex((u) => u.id === id)
+  if (index === -1) return null
+  db.usuarios[index].activo = !db.usuarios[index].activo
+  await writeDB(db)
+  return db.usuarios[index]
+}

@@ -1,4 +1,4 @@
-import { getAll, getById, create, update, remove } from '../models/task.model.js'
+import { getAll, getById, create, update, remove, updateStatus, assignUsers, getAssignedUsers, removeAssignedUser, filterTasks, getTasksByUser, getDashboardStats } from '../models/task.model.js'
 
 export const getTasks = async (req, res) => {
   try {
@@ -54,5 +54,79 @@ export const deleteTask = async (req, res) => {
     res.json({ message: 'Tarea eliminada correctamente', tarea: removed })
   } catch (error) {
     res.status(500).json({ error: 'Error al eliminar la tarea' })
+  }
+}
+
+export const patchTaskStatus = async (req, res) => {
+  try {
+    const { status } = req.body
+    if (!status) return res.status(400).json({ error: 'El campo status es requerido' })
+    const updated = await updateStatus(req.params.id, status)
+    if (!updated) return res.status(404).json({ error: 'Tarea no encontrada' })
+    res.json(updated)
+  } catch (error) {
+    res.status(500).json({ error: 'Error al actualizar el estado de la tarea' })
+  }
+}
+
+export const assignTaskUsers = async (req, res) => {
+  try {
+    const { userIds } = req.body
+    if (!Array.isArray(userIds) || userIds.length === 0) {
+      return res.status(400).json({ error: 'userIds debe ser un arreglo con al menos un id' })
+    }
+    const updated = await assignUsers(req.params.taskId, userIds)
+    if (!updated) return res.status(404).json({ error: 'Tarea no encontrada' })
+    res.json(updated)
+  } catch (error) {
+    res.status(500).json({ error: 'Error al asignar usuarios a la tarea' })
+  }
+}
+
+export const getTaskUsers = async (req, res) => {
+  try {
+    const users = await getAssignedUsers(req.params.taskId)
+    if (users === null) return res.status(404).json({ error: 'Tarea no encontrada' })
+    res.json(users)
+  } catch (error) {
+    res.status(500).json({ error: 'Error al obtener usuarios de la tarea' })
+  }
+}
+
+export const removeTaskUser = async (req, res) => {
+  try {
+    const updated = await removeAssignedUser(req.params.taskId, req.params.userId)
+    if (!updated) return res.status(404).json({ error: 'Tarea o asignación no encontrada' })
+    res.json(updated)
+  } catch (error) {
+    res.status(500).json({ error: 'Error al eliminar la asignación' })
+  }
+}
+
+export const filterTasksHandler = async (req, res) => {
+  try {
+    const { status, priority, userId, fechaInicio, fechaFin } = req.query
+    const tasks = await filterTasks({ status, priority, userId, fechaInicio, fechaFin })
+    res.json(tasks)
+  } catch (error) {
+    res.status(500).json({ error: 'Error al filtrar las tareas' })
+  }
+}
+
+export const getTasksByUserHandler = async (req, res) => {
+  try {
+    const tasks = await getTasksByUser(req.params.userId)
+    res.json(tasks)
+  } catch (error) {
+    res.status(500).json({ error: 'Error al obtener tareas del usuario' })
+  }
+}
+
+export const getDashboard = async (req, res) => {
+  try {
+    const stats = await getDashboardStats()
+    res.json(stats)
+  } catch (error) {
+    res.status(500).json({ error: 'Error al obtener estadísticas del dashboard' })
   }
 }

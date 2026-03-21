@@ -24,17 +24,6 @@
   ],
   "tareas": [
     {
-      "id": "1",
-      "title": "Tarea de ejemplo",
-      "description": "Descripción de prueba",
-      "status": "pendiente",
-      "fecha": "2026-03-14T10:00:00",
-      "usuariosAsignados": [
-        "2",
-        "3"
-      ]
-    },
-    {
       "id": "1773929368072",
       "fecha": "2026-03-19T14:09:28.072Z",
       "title": "Nueva tarea de prueba",
@@ -42,6 +31,37 @@
       "status": "pendiente",
       "usuariosAsignados": [
         "1"
+      ]
+    },
+    {
+      "id": "1774051447788",
+      "fecha": "2026-03-21T00:04:07.789Z",
+      "title": "Tarea de prueba",
+      "description": "asignacion multiples usuarios",
+      "status": "pendiente",
+      "usuariosAsignados": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "1774055891911",
+      "fecha": "2026-03-21T01:18:11.912Z",
+      "title": "Visualizar listado",
+      "description": "Listar proceso de usuarios",
+      "status": "completada",
+      "usuariosAsignados": [
+        "2"
+      ]
+    },
+    {
+      "id": "1774055918966",
+      "fecha": "2026-03-21T01:18:38.966Z",
+      "title": "Verificar backend",
+      "description": "verificacion del backend",
+      "status": "completada",
+      "usuariosAsignados": [
+        "3"
       ]
     }
   ]

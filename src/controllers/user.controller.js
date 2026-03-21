@@ -1,4 +1,4 @@
-import { getAll, getById, create, update, remove } from '../models/user.model.js'
+import { getAll, getById, create, update, remove, toggleStatus } from '../models/user.model.js'
 
 export const getUsers = async (req, res) => {
   try {
@@ -49,5 +49,15 @@ export const deleteUser = async (req, res) => {
     res.json({ message: 'Usuario eliminado correctamente', usuario: removed })
   } catch (error) {
     res.status(500).json({ error: 'Error al eliminar el usuario' })
+  }
+}
+
+export const toggleUserStatus = async (req, res) => {
+  try {
+    const updated = await toggleStatus(req.params.id)
+    if (!updated) return res.status(404).json({ error: 'Usuario no encontrado' })
+    res.json(updated)
+  } catch (error) {
+    res.status(500).json({ error: 'Error al actualizar el estado del usuario' })
   }
 }
